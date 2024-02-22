@@ -48,4 +48,11 @@ select * from Student order by age ASC;
 select * from student;
 set sql_safe_updates =0;
 update student set marks =marks+3;
+update student set age =35 where name="jerny";
+
+-- HAVING CLAUSE
+
+select name,marks,grade from student group by name,marks,grade having max(age >35);
+
+
 
