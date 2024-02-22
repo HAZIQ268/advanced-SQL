@@ -51,8 +51,17 @@ update student set marks =marks+3;
 update student set age =35 where name="jerny";
 
 -- HAVING CLAUSE
-
+select * from student;
 select name,marks,grade from student group by name,marks,grade having max(age >35);
 
+-- GENERAL RULE SYNTAX
+-- SELECT COLUMN
+-- FROM TABLE
+-- WHERE
+-- GROUP BY
+-- HAVING MAX()
+-- ORDER BUY
+
+select name,marks,grade from student where age > 20 group by name ,marks ,grade having max(marks>60) order by name ASC;
 
 
